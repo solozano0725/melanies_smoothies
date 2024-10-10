@@ -28,9 +28,8 @@ ingredients_list = st.multiselect(
 )
 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-st.text(fruityvice_response)
-
-# fv_df = st.dataframe(fruityvice_response.json(), use_container_width=True)
+# st.text(fruityvice_response)
+fv_df = st.dataframe(fruityvice_response.json(), use_container_width=True)
 
 if ingredients_list:
     st.write(ingredients_list)
